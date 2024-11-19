@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 90%;
+  line-height: 1;
+}
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+/*--------------------------------------------------------*/
+
+[class*="__container"] {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+/*--------------------------------------------------------*/
+.button--body {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Success {
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 20px 50px;
+  border-radius: 20px;
+}
+.Error {
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 20px 50px;
+  border-radius: 20px;
+}
+.Invalid {
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 20px 50px;
+  border-radius: 20px;
+}
+
+.notifation {
+  height: 100%;
+  justify-content: flex-end;
+  padding-right: 70px;
+  padding-bottom: 10px;
+  align-items: flex-end;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.notifation--show {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.notifation--show-span {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+  width: 380px;
+  background-color: aliceblue;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px 70px;
+}
+.img__notifaction {
+  padding-right: 10px;
+}
+
+.fa-check::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 255, 106);
+  width: 370px;
+  height: 3px;
+  animation: wait 5s linear;
+}
+.fa-xmark::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 0, 0);
+  width: 380px;
+  height: 3px;
+  animation: wait 5s linear;
+}
+.fa-exclamation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(217, 255, 0);
+  width: 380px;
+  height: 3px;
+  animation: wait 5s linear;
+}
+@keyframes wait {
+  0% {
+    width: 380px;
+  }
+  15% {
+    width: 300px;
+  }
+  25% {
+    width: 260px;
+  }
+  50% {
+    width: 160px;
+  }
+  75% {
+    width: 100px;
+  }
+  90% {
+    width: 60px;
+  }
+  100% {
+    width: 0px;
+  }
+}
